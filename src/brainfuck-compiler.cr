@@ -5,16 +5,23 @@ module Brainfuck
   # Simple parsing of brainfuck. Output is done using comma-separated numeric values, differing from standard Brainfuck spec.
   def parse(input : String) : String
     position = 16384
-    values = Array.new(32768, 0_u8)
+    values = Array.new(32768, 0_i16)
     output = ""
     input.each_char do |char|
       case char
       when '.'
         output += values[position].to_s + ","
       when '+'
-        values[position] += 1
+        values[position] = (values[position] + 1) % 256
       when '-'
-        values[position] -= 1
+        values[position] = (values[position] - 1) % 256
+      when '>'
+        position += 1
+        position = position % 32768
+      when '<'
+        position -= 1
+        position = position % 32768
+        # when ''
       end
     end
     output
