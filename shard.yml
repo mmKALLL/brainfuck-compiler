@@ -1,0 +1,13 @@
+name: brainfuck-compiler
+version: 0.1.0
+
+authors:
+  - Esa Koskinen <esakoskin2@gmail.com>
+
+targets:
+  brainfuck-compiler:
+    main: src/brainfuck-compiler.cr
+
+crystal: 1.2.0
+
+license: MIT
