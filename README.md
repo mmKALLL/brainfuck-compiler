@@ -1,18 +1,12 @@
 # brainfuck-compiler
 
-TODO: Write a description here
+Simple compiler and tests for a brainfuck dialect. Outputs comma-suffixed integers instead of characters, and has 32 kiB of memory (16 kiB in either direction from the starting position).
 
-## Installation
-
-TODO: Write installation instructions here
 
 ## Usage
 
-TODO: Write usage instructions here
+Run tests with `crystal spec`, or call Brainfuck.parse with the input string. Might make a REPL at some point.
 
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
